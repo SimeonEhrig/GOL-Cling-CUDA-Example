@@ -1,0 +1,36 @@
+os: linux
+
+language: go
+
+go:
+    - "1.11"
+
+python:
+    - "2.7"
+    - "3.5"
+
+addons:
+  apt:
+    packages:
+      - flawfinder
+      - squashfs-tools
+      - uuid-dev
+      - libuuid1
+      - libffi-dev
+      - libssl-dev
+      - libssl1.0.0
+      - libarchive-dev
+      - libgpgme11-dev
+      - libseccomp-dev
+  homebrew:
+    packages:
+      - squashfs
+    update: true
+
+
+sudo: required
+#dist: trusty
+
+script:
+  - echo "Hello Travis"
+  
